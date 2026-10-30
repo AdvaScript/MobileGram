@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Металлическая окантовка в стиле коммуникатора HTC Artemis -->
+    <linearGradient id="metalBezel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E6EA"/>
+      <stop offset="50%" stop-color="#9BA2A8"/>
+      <stop offset="100%" stop-color="#5A6065"/>
+    </linearGradient>
+
+    <!-- Фирменный градиент фона Windows Mobile / Telegram Retro -->
+    <linearGradient id="screenBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2489C5"/>
+      <stop offset="45%" stop-color="#14679A"/>
+      <stop offset="100%" stop-color="#093F62"/>
+    </linearGradient>
+
+    <!-- Стеклянный ретро-блик (Pocket PC Glass Highlight) -->
+    <linearGradient id="glassGloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Тени бумажного самолёта -->
+    <linearGradient id="wingTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2ECF4"/>
+    </linearGradient>
+    <linearGradient id="wingRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5D9E8"/>
+      <stop offset="100%" stop-color="#98B8D2"/>
+    </linearGradient>
+    <linearGradient id="wingBottomFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7EA5C4"/>
+      <stop offset="100%" stop-color="#6086A6"/>
+    </linearGradient>
+
+    <!-- Свечение антенны / орбиты -->
+    <radialGradient id="signalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FFAA" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00FFAA" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="8" stdDeviation="10" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Внешний корпус КПК: скругленный алюминиевый квадрат -->
+  <rect x="24" y="24" width="464" height="464" rx="108" fill="url(#metalBezel)" filter="url(#dropShadow)"/>
+
+  <!-- Внутренний глубокий обод экрана -->
+  <rect x="36" y="36" width="440" height="440" rx="96" fill="#18232C"/>
+
+  <!-- Основной дисплей с глубоким ультрамариновым градиентом -->
+  <rect x="44" y="44" width="424" height="424" rx="88" fill="url(#screenBg)"/>
+
+  <!-- Ретро-сетка координатной матрицы QVGA (стиль Windows Mobile 2003-2006) -->
+  <g stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="2">
+    <line x1="44" y1="120" x2="468" y2="120"/>
+    <line x1="44" y1="196" x2="468" y2="196"/>
+    <line x1="44" y1="272" x2="468" y2="272"/>
+    <line x1="44" y1="348" x2="468" y2="348"/>
+    <line x1="120" y1="44" x2="120" y2="468"/>
+    <line x1="196" y1="44" x2="196" y2="468"/>
+    <line x1="272" y1="44" x2="272" y2="468"/>
+    <line x1="348" y1="44" x2="348" y2="468"/>
+  </g>
+
+  <!-- Орбита радиосигнала коммуникатора (GPRS / EDGE / Wi-Fi волна) -->
+  <path d="M 110,380 A 210,210 0 0,1 420,170" fill="none" stroke="#60C2F8" stroke-width="4" stroke-dasharray="8,8" stroke-opacity="0.5"/>
+  <circle cx="420" cy="170" r="14" fill="url(#signalGlow)"/>
+  <circle cx="420" cy="170" r="5" fill="#FFFFFF"/>
+
+  <!-- Тень под самолетиком -->
+  <polygon points="120,380 390,130 330,340 240,320" fill="#031A29" opacity="0.45" filter="blur(6px)"/>
+
+  <!-- БУМАЖНЫЙ САМОЛЕТ (Динамичный полет под углом 35°) -->
+  <!-- Нижний внутренний киль / складка -->
+  <polygon points="228,308 266,242 278,326" fill="url(#wingBottomFold)"/>
+
+  <!-- Правое нижнее крыло -->
+  <polygon points="412,128 228,308 278,326" fill="url(#wingRight)"/>
+
+  <!-- Главное левое верхнее крыло (освещенное) -->
+  <polygon points="412,128 116,244 266,242" fill="url(#wingTop)"/>
+
+  <!-- Центральный хребет сгиба (освещенный блик) -->
+  <line x1="116" y1="244" x2="412" y2="128" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Инверсионный радио-след самолета (пунктир соединения со шлюзом) -->
+  <path d="M 80,340 Q 150,330 228,308" fill="none" stroke="#70E4FF" stroke-width="5" stroke-dasharray="6,8" stroke-linecap="round" stroke-opacity="0.75"/>
+
+  <!-- Ретро глянцевый блик верхнего стекла экрана КПК -->
+  <path d="M 44,44 L 468,44 A 88,88 0 0,1 468,160 Q 256,220 44,160 A 88,88 0 0,1 44,44 Z" fill="url(#glassGloss)"/>
+
+  <!-- Декоративные метки софт-клавиш WM6 снизу экрана -->
+  <rect x="74" y="440" width="48" height="4" rx="2" fill="#58A2D0" opacity="0.6"/>
+  <rect x="390" y="440" width="48" height="4" rx="2" fill="#58A2D0" opacity="0.6"/>
+</svg>

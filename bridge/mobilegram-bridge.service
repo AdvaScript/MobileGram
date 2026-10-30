@@ -1,0 +1,18 @@
+[Unit]
+Description=MobileGram Bridge for Windows Mobile 6
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/mobilegram-bridge
+Environment="TG_API_ID=ВАШ_API_ID"
+Environment="TG_API_HASH=ВАШ_API_HASH"
+Environment="BRIDGE_HOST=0.0.0.0"
+Environment="BRIDGE_PORT=8080"
+ExecStart=/opt/mobilegram-bridge/venv/bin/python3 /opt/mobilegram-bridge/bridge.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

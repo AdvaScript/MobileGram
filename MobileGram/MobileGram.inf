@@ -1,0 +1,33 @@
+[Version]
+Signature = "$Windows NT$"
+Provider = "MobileGram"
+CESignature = "$Windows CE$"
+
+[CEStrings]
+AppName = "MobileGram"
+InstallDir = %CE1%\%AppName%
+
+[CEDevice]
+VersionMin = 5.0
+VersionMax = 6.99
+BuildMax = 0xE0000000
+
+[DefaultInstall]
+CopyFiles = Files.App
+CEShortcuts = Shortcuts.App
+
+[SourceDisksNames]
+1 = ,"App Files",,.
+
+[SourceDisksFiles]
+MobileGram.exe = 1
+
+[DestinationDirs]
+Files.App = 0, %InstallDir%
+Shortcuts.App = 0, %CE11%
+
+[Files.App]
+MobileGram.exe,,,0
+
+[Shortcuts.App]
+MobileGram,0,MobileGram.exe
