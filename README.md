@@ -16,7 +16,7 @@
 ```
 +------------------------------------+          +------------------------------------+          +-----------------------+
 |        Windows Mobile 6.x          |          |         MobileGram Bridge          |          |    Telegram Cloud     |
-|   (HTC P3300 Artemis / OMAP 850)   |  HTTP    |    (Python 3 + Telethon + aiohttp) | MTProto  |   (Official Servers)  |
+|                                    |  HTTP    |    (Python 3 + Telethon + aiohttp) | MTProto  |   (Official Servers)  |
 |                                    |<-------->|                                    |<-------->|                       |
 |   - Pocket MSN Messenger UI        |  REST &  |   - Local / VPS Server             |  TCP/TLS |   - Telegram API      |
 |   - Double-buffered GDI rendering  |  Polling |   - Web QR Login (/qr)             |          |   - Channels & Topics |
